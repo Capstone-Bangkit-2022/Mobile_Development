@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="email"
+            type="String" />
+        <variable
+            name="password"
+            type="String" />
+    </data>
+
+<LinearLayout
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/login_register_padding">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/noHpEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:hint="@string/email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/passwordEt">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:text="@={email}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passwordEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/password"
+        app:layout_constraintBottom_toTopOf="@+id/materialTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="#20333333">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:text="@={password}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/loginBtn"
+        android:layout_width="match_parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="15dp"
+        android:layout_height="wrap_content"
+        android:text="@string/login"
+        app:layout_constraintBottom_toTopOf="@+id/registerBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+</LinearLayout>
+</layout>
