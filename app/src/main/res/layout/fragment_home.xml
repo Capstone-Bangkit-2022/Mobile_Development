@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/activity_horizontal_margin"
+    tools:context=".module.homepage.fragment.home.HomeFragment">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/searchEt"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_height="wrap_content"
+        app:boxStrokeWidth="0dp"
+        app:boxBackgroundColor="#F4F5F7"
+        app:boxCornerRadiusTopStart="@dimen/search_box_corner"
+        app:boxCornerRadiusBottomEnd="@dimen/search_box_corner"
+        app:boxCornerRadiusBottomStart="@dimen/search_box_corner"
+        app:boxCornerRadiusTopEnd="@dimen/search_box_corner">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:drawableStart="@drawable/ic_search"
+            android:hint="@string/search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/categoryTv"
+        android:layout_marginTop="16dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_width="match_parent"
+        android:textSize="17sp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/searchEt"
+        android:text="@string/category" />
+    <HorizontalScrollView
+        app:layout_constraintTop_toBottomOf="@id/categoryTv"
+        android:id="@+id/categoryRv"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:layout_width="match_parent"
+        android:scrollbars="horizontal"
+        android:layout_height="wrap_content">
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingVertical="16dp"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/allRadio"
+                style="@style/CategoryTabButton"
+                android:layout_width="wrap_content"
+                android:text="@string/all"
+                android:checked="true"
+                android:layout_height="wrap_content"/>
+            <RadioButton
+                android:id="@+id/placeholderRadio"
+                style="@style/CategoryTabButton"
+                android:layout_width="wrap_content"
+                android:text="PLACEHOLDER"
+                android:layout_height="wrap_content"/>
+        </RadioGroup>
+    </HorizontalScrollView>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/organicTabL"
+        app:layout_constraintTop_toBottomOf="@id/categoryRv"
+        android:layout_width="match_parent"
+        android:textAllCaps="false"
+        android:layout_height="wrap_content" >
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/organic"/>
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/inorganic"/>
+    </com.google.android.material.tabs.TabLayout>
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/organicTabL"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="0dp">
+
+    </androidx.viewpager2.widget.ViewPager2>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
