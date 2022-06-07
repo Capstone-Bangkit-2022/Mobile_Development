@@ -13,6 +13,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.capstone.myapplication.R
 import com.capstone.myapplication.base.BaseActivity
 import com.capstone.myapplication.databinding.LoginActivityBinding
+import com.capstone.myapplication.module.homepage.HomepageActivity
 import com.capstone.myapplication.module.register.RegisterActivity
 import com.capstone.myapplication.shared.database.UserPreferences
 import com.capstone.myapplication.shared.database.ViewModelDatastoreFactory
@@ -22,7 +23,6 @@ import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
 import com.google.android.gms.tasks.Task
-import com.storyapp.dicoding.shared.view.showToast
 
 
 private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")
@@ -118,11 +118,10 @@ class LoginActivity : BaseActivity<LoginActivityBinding>(R.layout.login_activity
     }
 
      private fun redirectToHomepage() {
-         showToast("Sign In Berhasil, redirect ke homepage")
-//        startActivity(
-//            Intent(this, HomepageActivity::class.java)
-//        )
-//        finish()
+        startActivity(
+            Intent(this, HomepageActivity::class.java)
+        )
+        finish()
     }
 
     private fun redirectToRegister() {

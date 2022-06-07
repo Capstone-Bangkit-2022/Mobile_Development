@@ -15,6 +15,7 @@ abstract class BaseActivity<T: ViewDataBinding>(private val layoutId: Int)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, layoutId)
+        supportActionBar?.hide()
     }
 
     fun startLoading() {
