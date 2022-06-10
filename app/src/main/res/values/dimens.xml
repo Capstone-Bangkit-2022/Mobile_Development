@@ -6,4 +6,6 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="category_tab_spacing">8dp</dimen>
     <dimen name="search_box_corner">32dp</dimen>
+    <dimen name="profile_image">100dp</dimen>
+    <dimen name="profile_drawable_padding">16dp</dimen>
 </resources>
