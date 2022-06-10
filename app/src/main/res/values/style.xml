@@ -8,4 +8,45 @@
         <item name="android:textStyle">bold</item>
         <item name="android:layout_marginEnd">@dimen/category_tab_spacing</item>
     </style>
+
+    <style name="ShapeAppearanceOverlay.App.CornerSize50Percent" parent="">
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="PrimaryText" parent="">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Profile.List" parent="">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:drawablePadding">@dimen/profile_drawable_padding</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:maxLines">1</item>
+    </style>
+    <style name="Profile.LeftPart" parent="Profile.List">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="Profile.RightPart" parent="Profile.List">
+        <item name="android:gravity">center_vertical|end</item>
+        <item name="android:drawableEnd">@drawable/ic_next</item>
+        <item name="android:ellipsize">end</item>
+        <item name="fontFamily">@font/poppins</item>
+    </style>
+
+    <style name="Profile.Card" parent="">
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:padding">@dimen/activity_vertical_margin</item>
+        <item name="cardElevation">0dp</item>
+    </style>
+
+    <style name="Profile.WasteCount" parent="PrimaryText">
+        <item name="android:textSize">17sp</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
 </resources>

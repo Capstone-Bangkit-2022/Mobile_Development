@@ -17,4 +17,12 @@
     <string name="search">Search</string>
     <string name="category">Category</string>
     <string name="all">All</string>
+    <string name="glass">Glass</string>
+    <string name="plastic">Plastic</string>
+    <string name="iron">Iron</string>
+    <string name="logout">Logout</string>
+    <string name="gender">Gender</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="hidden_password">************</string>
+    <string name="change_password">Change Password</string>
 </resources>
