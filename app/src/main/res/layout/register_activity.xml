@@ -75,7 +75,7 @@
         android:id="@+id/registerBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/register"
+        android:text="@string/sign_up"
         android:layout_marginTop="50dp"
         android:textAllCaps="false"/>
 </androidx.appcompat.widget.LinearLayoutCompat>
