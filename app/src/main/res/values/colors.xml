@@ -9,4 +9,5 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="nonactive_ic">#FF9FA5C0</color>
+    <color name="cart_item_color">#EBF0FF</color>
 </resources>

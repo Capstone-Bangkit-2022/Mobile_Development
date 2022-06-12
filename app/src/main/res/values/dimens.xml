@@ -8,4 +8,5 @@
     <dimen name="search_box_corner">32dp</dimen>
     <dimen name="profile_image">100dp</dimen>
     <dimen name="profile_drawable_padding">16dp</dimen>
+    <dimen name="small_button_size">24dp</dimen>
 </resources>

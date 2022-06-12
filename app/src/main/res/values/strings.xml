@@ -25,4 +25,9 @@
     <string name="phone_number">Phone Number</string>
     <string name="hidden_password">************</string>
     <string name="change_password">Change Password</string>
+    <string name="cart">Cart</string>
+    <string name="order">Order</string>
+    <string name="total_item">Total Item</string>
+    <string name="total_rewards">Total Rewarded Point</string>
+    <string name="checkout">Checkout</string>
 </resources>
