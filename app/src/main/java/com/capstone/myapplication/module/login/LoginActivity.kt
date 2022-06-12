@@ -106,12 +106,12 @@ class LoginActivity : BaseActivity<LoginActivityBinding>(R.layout.login_activity
 //                )
             }
 
-            signInButton.setOnClickListener {
+            googleBtn.setOnClickListener {
                 val signInIntent = mGoogleSignInClient.signInIntent
                 googleSignInAResult.launch(signInIntent)
             }
 
-            registerBtn.setOnClickListener {
+            signupTv.setOnClickListener {
                 redirectToRegister()
             }
         }

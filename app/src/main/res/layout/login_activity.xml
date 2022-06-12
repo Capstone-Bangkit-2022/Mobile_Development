@@ -11,72 +11,134 @@
             type="String" />
     </data>
 
-<LinearLayout
-    android:orientation="vertical"
-    android:gravity="center"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="@dimen/login_register_padding">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/noHpEt"
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
-        android:hint="@string/email"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/passwordEt">
+        android:padding="@dimen/login_register_padding">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:text="@={email}"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/passwordEt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/password"
-        app:layout_constraintBottom_toTopOf="@+id/materialTextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:passwordToggleEnabled="true"
-        app:passwordToggleTint="#20333333">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:text="@={password}"
+        <com.google.android.material.textview.MaterialTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPassword" />
-    </com.google.android.material.textfield.TextInputLayout>
+            style="@style/PrimaryText"
+            android:layout_marginTop="32dp"
+            android:textSize="22sp"
+            android:gravity="center_horizontal"
+            android:text="@string/welcome_back" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/loginBtn"
-        android:layout_width="match_parent"
-        android:layout_marginTop="30dp"
-        android:layout_height="wrap_content"
-        android:text="@string/login"
-        app:layout_constraintBottom_toTopOf="@+id/registerBtn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:layout_marginTop="8dp"
+            android:gravity="center_horizontal"
+            android:text="@string/please_enter_your_account_credential" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/registerBtn"
-        android:layout_width="match_parent"
-        android:backgroundTint="@color/teal_200"
-        android:layout_marginBottom="15dp"
-        android:layout_height="wrap_content"
-        android:text="@string/register"
-        app:layout_constraintBottom_toTopOf="@+id/registerBtn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/noHpEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            style="@style/EditText"
+            app:startIconDrawable="@drawable/ic_email"
+            android:layout_marginBottom="15dp"
+            android:hint="@string/email"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/passwordEt">
 
-    <com.google.android.gms.common.SignInButton
-        android:id="@+id/sign_in_button"
-        android:layout_width="wrap_content"
-        app:buttonSize="icon_only"
-        android:layout_height="wrap_content" />
-</LinearLayout>
+            <com.google.android.material.textfield.TextInputEditText
+                android:text="@={email}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/passwordEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/EditText"
+            android:hint="@string/password"
+            app:layout_constraintBottom_toTopOf="@+id/materialTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:startIconDrawable="@drawable/ic_change_password"
+            app:layout_constraintStart_toStartOf="parent"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:text="@={password}"
+                android:paddingHorizontal="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:gravity="end"
+            android:text="@string/forgot_password"
+            android:layout_marginTop="24dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/loginBtn"
+            android:layout_width="match_parent"
+            style="@style/StandardButton"
+            android:layout_marginTop="30dp"
+            android:text="@string/login"
+            app:layout_constraintBottom_toTopOf="@+id/signupTv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/or_continue_with"
+            android:layout_marginVertical="12dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/googleBtn"
+            android:layout_width="match_parent"
+            android:backgroundTint="#FF5842"
+            style="@style/StandardButton"
+            app:icon="@drawable/googleg_standard_color_18"
+            app:iconGravity="textStart"
+            android:text="@string/google"
+            app:layout_constraintBottom_toTopOf="@+id/signupTv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:textColor="@color/black"
+                android:layout_weight="6"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="@string/don_t_have_any_account"
+                android:layout_marginVertical="24dp" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/signupTv"
+                android:layout_width="wrap_content"
+                android:textColor="@color/primary_green"
+                android:layout_weight="4"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:text="@string/sign_up"
+                android:layout_marginVertical="24dp" />
+        </LinearLayout>
+    </LinearLayout>
+    </ScrollView>
 </layout>
